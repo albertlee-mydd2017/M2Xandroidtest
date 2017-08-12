@@ -12,21 +12,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
         android:text="You are healthy!"
         android:textSize="40dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tvHealStatus"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,11 +45,11 @@
                 android:layout_height="100dp"
                 android:src="@drawable/hrv" />
             <TextView
-                android:text="HRV"
+                android:text="0 HRV"
                 android:textColor="#4d4d4d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvHRC"/>
+                android:id="@+id/tvHRV"/>
         </LinearLayout>
 
         <LinearLayout
@@ -62,10 +63,11 @@
                 android:layout_height="100dp"
                 android:src="@drawable/heartbeat" />
             <TextView
-                android:text="110 beats/min"
+                android:text="0 beats/min"
                 android:textColor="#4d4d4d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:id="@+id/tvHeartRate"/>
         </LinearLayout>
 
@@ -82,7 +84,7 @@
             android:layout_marginLeft="150dp"
             android:src="@drawable/bodytemp"/>
         <TextView
-            android:text="35°C"
+            android:text="0°C"
             android:textColor="#4d4d4d"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
