@@ -118,15 +118,11 @@ public class ManagerActivity extends AppCompatActivity implements
         switch (id)
         {
             case R.id.profile:
-               // startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, ProfileActivity.class));
                 return true;
 
             case R.id.dashboard:
                 startActivity(new Intent(this, MainActivity.class));
-                return true;
-
-            case R.id.rewards:
-               // startActivity(new Intent(this, NoHamburger.class));
                 return true;
 
             case R.id.guides:

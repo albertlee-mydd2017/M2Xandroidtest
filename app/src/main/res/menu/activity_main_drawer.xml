@@ -11,10 +11,6 @@
             android:icon="@drawable/dashboard"
             android:title="Dashboard" />
         <item
-            android:id="@+id/rewards"
-            android:icon="@drawable/rewards"
-            android:title="Rewards" />
-        <item
             android:id="@+id/guides"
             android:icon="@drawable/guides"
             android:title="Guides" />

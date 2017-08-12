@@ -1,6 +1,7 @@
 package mydd2017.com.m2xandroidtest;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class GuidesActivity extends ManagerActivity{
         protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guides);
+            //cardView.setCardBackgroundColor(Color.RED);
 
             ((TextView) findViewById(R.id.GoButton1)).setOnClickListener(new View.OnClickListener() {
                 @Override
