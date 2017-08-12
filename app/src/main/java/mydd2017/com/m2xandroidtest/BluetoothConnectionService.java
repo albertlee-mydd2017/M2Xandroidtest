@@ -353,16 +353,37 @@ public class BluetoothConnectionService {
                     }
                     double avgHeartRate = (double) totalHeartRate / heartRateArray.size();
 
-                    if (mainActivity != null) {
-                        TextView tvHRV = mainActivity.getTvHRV();
-                        if (tvHRV != null && tvHRV.isShown()) {
-                            tvHRV.setText("" + HRV + "HRV");
-                            mainActivity.getTvHeartRate().setText("Avg. " + avgHeartRate
-                                    + "\nMax. " + maxHeartRate
-                                    + "\nMin. " + minHeartRate);
-                            mainActivity.getTvTemperature().setText("" + temp + "°C");
-                        }
-                    }
+                    Log.v("data","before mainActivity null");
+                    MainActivity.getInstance().refreshData(HRV, temp, maxHeartRate, minHeartRate, avgHeartRate);
+//                    MainActivity.getInstance().runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//
+//                        }
+//                    });
+//                    if (MainActivity.getInstance() != null) {
+//                        Log.v("data","mainActivity not null");
+//                        TextView tvHRV = MainActivity.getInstance().getTvHRV();
+//                        if (tvHRV != null) {
+//                            Log.v("data","tvHRV is not null");
+//                        }
+//                        if (tvHRV.isShown()) {
+//                            Log.v("data","tvHRV is shown");
+//                        }
+//                        if (tvHRV != null && tvHRV.isShown()) {
+//                            Log.v("data","tvHRV is shown");
+//                            Log.v("data","HRV -- " + HRV);
+//                            Log.v("data","AvgHR -- " + avgHeartRate);
+//                            Log.v("data","MaxHR -- " + maxHeartRate);
+//                            Log.v("data","MinHR -- " + minHeartRate);
+//                            Log.v("data","temp -- " + temp);
+//                            tvHRV.setText("" + HRV + "HRV");
+//                            mainActivity.getTvHeartRate().setText("Avg. " + avgHeartRate
+//                                    + "\nMax. " + maxHeartRate
+//                                    + "\nMin. " + minHeartRate);
+//                            mainActivity.getTvTemperature().setText("" + temp + "°C");
+//                        }
+//                    }
 
                     JSONObject tempJason = new JSONObject(tempRecord);
                     JSONObject heartRateJason = new JSONObject(heartRateRecord);

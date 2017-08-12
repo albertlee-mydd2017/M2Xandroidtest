@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class MainActivity extends ManagerActivity{
 
     public static MainActivity instance;
-    private TextView tvHRV, tvHeartRate, tvTemperature;
+    private TextView tvHRV, tvHeartRate, tvTemperature, tvHealthStatus;
 
     public static MainActivity getInstance() {
 //        if (instance == null) {
@@ -26,8 +26,36 @@ public class MainActivity extends ManagerActivity{
         tvHRV = (TextView) findViewById(R.id.tvHRV);
         tvHeartRate = (TextView) findViewById(R.id.tvHeartRate);
         tvTemperature = (TextView) findViewById(R.id.tvTemperature);
+        tvHealthStatus = (TextView) findViewById(R.id.tvHealStatus);
+        tvHealthStatus.setText("Unknown Reading");
 
         instance = this;
+    }
+
+    public void refreshData(final int HRV, final int temp, final int maxHeartRate, final int minHeartRate, final double avgHeartRate) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (tvHRV.isShown()) {
+                    tvHRV.setText("" + HRV + " HRV");
+                }
+
+                if (tvTemperature.isShown()) {
+                    tvTemperature.setText("" + temp + "°C");
+                }
+
+                if (tvHeartRate.isShown()) {
+                    tvHeartRate.setText("Avg. " + String.format("%.2f", avgHeartRate) + " /min"
+                            + "\nMax. " + maxHeartRate + " /min"
+                            + "\nMin. " + minHeartRate + " /min");
+                }
+
+                if (tvHealthStatus.isShown()) {
+                    tvHealthStatus.setText("You are healthy!");
+                }
+            }
+        });
+
     }
 
     public TextView getTvHRV() {
