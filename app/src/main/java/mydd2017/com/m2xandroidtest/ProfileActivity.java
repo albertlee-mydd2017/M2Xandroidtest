@@ -10,6 +10,6 @@ public class ProfileActivity extends ManagerActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guides);
+        setContentView(R.layout.activity_profile);
     }
 }

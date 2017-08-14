@@ -33,6 +33,8 @@
         <activity android:name=".GuidesDetailActivity"></activity>
         <activity android:name=".WelcomeActivty"></activity>
         <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".StressActivity"></activity>
+        <activity android:name=".ExerciseActivity"></activity>
     </application>
 
 </manifest>

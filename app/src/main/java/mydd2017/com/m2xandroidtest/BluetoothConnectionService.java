@@ -355,6 +355,7 @@ public class BluetoothConnectionService {
 
                     Log.v("data","before mainActivity null");
                     MainActivity.getInstance().refreshData(HRV, temp, maxHeartRate, minHeartRate, avgHeartRate);
+
 //                    MainActivity.getInstance().runOnUiThread(new Runnable() {
 //                        @Override
 //                        public void run() {

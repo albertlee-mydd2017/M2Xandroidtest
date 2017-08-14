@@ -35,7 +35,24 @@ public class GuidesActivity extends ManagerActivity{
                     startActivity(intent);
                 }
             });
-    }
+
+            ((TextView) findViewById(R.id.GoButton2)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(),StressActivity.class);
+                    startActivity(intent);
+                }
+            });
+            ((TextView) findViewById(R.id.GoButton3)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(),ExerciseActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+
+                }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

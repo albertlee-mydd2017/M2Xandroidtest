@@ -1,5 +1,6 @@
 package mydd2017.com.m2xandroidtest;
 
+import android.support.v7.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
@@ -25,9 +26,9 @@ import android.widget.TextView;
  * Created by Hang on 8/12/2017.
  */
 
-public class WelcomeActivty extends AppCompatActivity {
+public class StressActivity extends AppCompatActivity{
     private ViewPager viewPager;
-    private MyViewPagerAdapter myViewPagerAdapter;
+    private StressActivity.MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
     private int[] layouts;
@@ -59,9 +60,8 @@ public class WelcomeActivty extends AppCompatActivity {
         // layouts of all welcome sliders
         // add few more layouts if you want
         layouts = new int[]{
-                R.layout.welcome_one,
-                R.layout.welcome_two,
-                R.layout.welcome_three,};
+                R.layout.stress_one,
+                R.layout.stress_two,};
 
         // adding bottom dots
         addBottomDots(0);
@@ -115,7 +115,7 @@ public class WelcomeActivty extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(WelcomeActivty.this, MainActivity.class));
+        startActivity(new Intent(StressActivity.this, MainActivity.class));
     }
 
     //	viewpager change listener
@@ -129,13 +129,13 @@ public class WelcomeActivty extends AppCompatActivity {
             if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
                 btnNext.setText(getString(R.string.start));
-                AlertDialog.Builder builder = new AlertDialog.Builder(WelcomeActivty.this);
-                        builder.setMessage("Congrats you got a badge !");
-                        builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                // continue with delete
-                            }
-                        })
+                AlertDialog.Builder builder = new AlertDialog.Builder(StressActivity.this);
+                builder.setMessage("Congrats you got a badge !");
+                builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // continue with delete
+                    }
+                })
                         .setIcon(R.drawable.badges)
                         .show();
 
@@ -201,6 +201,5 @@ public class WelcomeActivty extends AppCompatActivity {
         public void destroyItem(ViewGroup container, int position, Object object) {
             View view = (View) object;
             container.removeView(view);
-        }
-    }
+        }}
 }

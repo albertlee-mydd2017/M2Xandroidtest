@@ -130,7 +130,7 @@ public class ManagerActivity extends AppCompatActivity implements
                 return true;
 
             case R.id.badges:
-                //startActivity(new Intent(this, .class));
+                startActivity(new Intent(this, BadgesActivity.class));
                 return true;
         }
 

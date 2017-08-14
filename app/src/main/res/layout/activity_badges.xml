@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="18dp"
-                android:src="@drawable/profile" />
+                android:src="@drawable/badges" />
 
 
             <TextView
@@ -35,7 +35,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/cardview_image"
                 android:paddingTop="30dp"
-                android:text="Sleeping Guide"
+                android:text="Sleeping Badge"
                 android:textSize="24sp" />
 
 
@@ -83,7 +83,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="18dp"
 
-                android:src="@drawable/profile" />
+                android:src="@drawable/badges" />
 
 
 
@@ -95,7 +95,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/cardview_image1"
                 android:paddingTop="30dp"
-                android:text="Stress Relieve Guide"
+                android:text="Stress Badge"
                 android:textSize="24sp" />
 
 
@@ -144,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="18dp"
-                android:src="@drawable/profile" />
+                android:src="@drawable/badges" />
 
 
 
@@ -156,7 +156,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@+id/cardview_image2"
                 android:paddingTop="30dp"
-                android:text="Exercise Guide"
+                android:text="Exercise Badge"
                 android:textSize="24sp" />
 
 
